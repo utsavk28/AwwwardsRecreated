@@ -1,0 +1,401 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* Navbar CSS */
+
+body {
+    width: 100%;
+    overflow-x: hidden;
+}
+
+#navbar {
+    position: sticky;
+    top: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    background-color: #f4f7f6;
+    border-bottom: 1px solid black;
+    z-index: 1;
+}
+
+.navbar-brand a {
+    text-decoration: none;
+    color: black;
+    font-size: 28px;
+    font-weight: 400;
+    text-align: center;
+}
+
+
+.right-btn , .register-login,.submit-btn {
+    display: inline-block;
+    height: 100%;
+    width: fit-content;
+}
+
+.right-btn span {
+    position: relative;
+    top:3px;
+}
+
+.submit-btn {
+    background-color: #49c5b6;
+}
+
+#submit-custom-btn {
+    height: 100%;
+}
+
+
+/* Main Body CSS */
+
+main {
+    width: 100vw;
+}
+
+/* Project Showcase CSS */
+
+.project-showcase {
+    position: relative;
+    width: 100%;
+    background-size: cover;
+    overflow: hidden;
+    height: 36.8vw;
+    min-height: 450px;
+}
+
+.project-showcase::before {
+    position: absolute;
+    top:0;
+    left:0;
+    width: 100%;
+    content: " ";
+    background: url(./images/flowers.png) no-repeat center;
+    filter: contrast(90%);
+    background-size: cover;
+    overflow: hidden;
+    height: 36.8vw;
+    min-height: 450px;
+}
+
+.inner-project-showcase {
+    position: relative;
+    max-width: 1860px;
+    width: 100%;
+    height: 100%;
+    padding:0 66px;
+    margin: auto;
+    color: white;
+}
+
+.site-date {
+    position: absolute;
+    top:8.25%;
+    left: 1.75%;
+}
+
+.likes-tab {
+    display: flex;
+    position: absolute;
+    top:8.25%;
+    right: 2.25%;
+}
+
+.likes-tab > div {
+    margin: 0 6px;
+}
+
+.avatar img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.btn-grp-1 {
+    display: inline;
+}
+
+.btn-grp-1 button ,.btn-grp-2 button {
+    border-radius: 20px;
+    margin:0 2px;
+    padding-left:16px;
+    padding-right: 16px;
+}
+
+.btn-grp-1 img {
+    width: 20px;
+}
+
+.site-detail {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+}
+
+.site-detail span {
+    color: #49c5b6;
+}
+
+.btn-grp-2 {
+    position:absolute;
+    bottom: 5%;
+    left:1.75%;
+}
+
+.btn-grp-3 {
+    position:absolute;
+    bottom: 5%;
+    right:2.25%;
+}
+
+.btn-grp-3 button {
+    border-radius: 50%;
+}
+
+/* Tech Stack */
+
+#tech-stack {
+    margin-top:16px;
+}
+
+#tech-stack p {
+    text-align: center;
+    margin: 10px 7.5%;
+    padding: 10px 7.5%;
+}
+
+.tech-stack-btn-grp {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.tech-stack-btn-grp button {
+    margin-right: 10px;
+    border-radius: 24px;
+}
+
+/*  */
+
+.cards-nav {
+    margin:50px 1.75%;
+}
+
+.cards-grp {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+}
+
+.card {
+    position: relative;
+    background-color: rgba(255, 255, 255, 0.8);
+    margin: 10px;
+    height: fit-content;
+    overflow: hidden;
+}
+
+.img-div {
+    height: 300px;
+    overflow: hidden;
+}
+
+.card img {
+    object-fit:cover;
+    height: 100%;
+    transition: all 0.5s ease-in-out;
+}
+
+.card-body {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+    padding:0 10px;
+}
+
+.card-footer-1 {
+    padding:0 10px;
+}
+
+.card-text span {
+    margin-top: 24px;
+    float: right;
+}
+
+.card-footer-1 h6 {
+    display: inline-block;
+}
+
+.pill-grp {
+    float: right;
+}
+
+.cards-nav p:first-child {
+    font-size: 18px;
+}
+
+.card img:hover {
+    transform: scale(1.05);
+    opacity: 0.75;
+}
+
+.load-more-div {
+    display: flex;
+    justify-content: center;
+    margin: 0 auto 36px;
+}
+
+.next-con-div {
+    float: right;
+}
+
+/* .next-con-div span a {
+    margin: 0 36px 0 8px;
+} */
+
+footer {
+    padding: 2.25%;
+}
+
+.link-grp-div {
+    margin: 24px 0;
+}
+
+.link-grp-div a {
+    margin-right: 8px;
+    text-decoration: none;
+}
+
+.link-grp-div a:hover {
+    text-decoration: none;
+}
+
+
+/* Media Query */
+
+@media screen and (max-width:1960px) {
+    .inner-project-showcase {
+        width: 100%;
+        margin: auto;
+        padding:0 66px;
+    }
+}
+
+@media screen and (max-width:1560px) {
+    .register-login span {
+        display: none;
+    }
+
+    .cards-grp {
+        grid-template-columns: auto auto auto;
+    }
+
+    .cards-grp .card:nth-child(4) {
+        display: none;
+    }
+}
+
+/* @media screen and (max-width:1440px) {
+    .inner-project-showcase {
+        width: 100%;
+        padding: 66px;
+    }
+} */
+
+
+@media screen and (max-width:1024px) {
+    .register-login {
+        display: none;
+    }
+
+    .inner-project-showcase {
+        padding:0 35px;
+    }
+
+    .likes-tab {
+        display: none;
+    }
+
+    .btn-grp-2,.btn-grp-3 {
+        display: none;
+    }
+}
+
+@media screen and (max-width:768px) {
+
+    .inner-project-showcase {
+        padding:0 23px;
+    }
+
+    .cards-grp {
+        display: grid;
+        grid-template-columns: auto auto;
+        overflow: hidden;
+    }
+
+    /* .cards-grp .card:nth-child(3) {
+        display: none;
+    } */
+
+    .site-date, .site-detail {
+        display: none;
+    }
+
+    .project-showcase::before {
+        background: url(./images/Skin_Food.png) no-repeat center;
+        filter: contrast(100%);
+    }
+}
+
+
+@media screen and (max-width:640px) {
+    .right-btn  {
+        width: 100vw;
+    }
+
+    .submit-btn , #submit-custom-btn {
+        width: 100%;
+    }
+    
+    .navbar-brand {
+        position: relative;
+        right: 95%;
+        transform: translateX(100%);
+    }
+
+    .search-btn {
+        position: relative;
+        left: 100%;
+        transform: translateX(-100%);
+    }
+
+}
+
+@media screen and (max-width:450px) {
+    .cards-grp {
+        display: grid;
+        grid-template-columns: auto;
+    }
+
+    .cards-grp .card:nth-child(2) {
+        display: none;
+    }
+
+}
+
+
+@media screen and (max-width:280px) {
+    .navbar-brand {
+        position: relative;
+        float: left;
+        width: 100%;
+        padding: 5px 10px;
+    }
+
+    .search-btn {
+        display: none;
+    }
+}
